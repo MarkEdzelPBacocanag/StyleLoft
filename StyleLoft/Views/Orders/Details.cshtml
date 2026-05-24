@@ -1,0 +1,59 @@
+@model StyleLoft.Models.Order
+@{
+    ViewData["Title"] = "Order Details - " + Model.OrderNumber!;
+}
+
+<div class="container">
+    <div class="confirmation-page">
+        <h1>Order Details</h1>
+        <p class="order-number">Order Number: @Model.OrderNumber</p>
+        <p class="message">Status: @Model.Status</p>
+        @if (!string.IsNullOrEmpty(Model.StreetAddress) || !string.IsNullOrEmpty(Model.City) || !string.IsNullOrEmpty(Model.StateProvince) || !string.IsNullOrEmpty(Model.ZipPostalCode) || !string.IsNullOrEmpty(Model.Country))
+        {
+            <div class="summary-card" style="margin-top: 1rem;">
+                <h2>Shipping Address</h2>
+                <p style="padding: 0.8rem 1.2rem;">
+                    @Model.StreetAddress<br>
+                    @Model.City, @Model.StateProvince @Model.ZipPostalCode<br>
+                    @Model.Country
+                </p>
+            </div>
+        }
+        
+        <div class="summary-card">
+            <h2>Items</h2>
+            @foreach (var item in Model.OrderItems!)
+            {
+                <div class="cart-item" style="margin-bottom: 1rem; padding: 1rem; border-bottom: 1px solid #eee;">
+                    <img src="@item.Product!.ImageUrl" alt="@item.Product!.Name" style="width: 80px; height: 80px; object-fit: cover; border-radius: 4px;" />
+                    <div class="item-details">
+                        <h3>@item.Product!.Name</h3>
+                        <p>Qty: @item.Quantity</p>
+                    </div>
+                    <div class="item-price">
+                        <p>₱@(item.Price * item.Quantity)</p>
+                    </div>
+                </div>
+            }
+            
+            <h2 style="margin-top: 2rem;">Order Summary</h2>
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span>₱@Model.Subtotal.ToString("N2")</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span>@(Model.ShippingCost == 0 ? "Complimentary" : "₱" + Model.ShippingCost.ToString("N2"))</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total</span>
+                <span>₱@Model.Total.ToString("N2")</span>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <a asp-controller="Orders" asp-action="History" class="btn btn-outline">Back to Orders</a>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Continue Shopping</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,149 @@
+@model StyleLoft.Models.Order
+@{
+    ViewData["Title"] = "Order Details - " + Model.OrderNumber!;
+}
+
+@if (TempData["Success"] != null)
+{
+    <div id="toast-success" class="toast-notification" style="position: fixed; top: 20px; right: 20px; background: #28a745; color: white; padding: 1rem 1.5rem; border-radius: 8px; z-index: 1000; box-shadow: 0 4px 16px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 0.75rem; opacity: 0; transform: translateX(100px);">
+        <span style="font-size: 1.25rem;">✅</span>
+        <span>@TempData["Success"]</span>
+    </div>
+}
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize toast notifications
+            function showToast(toastId) {
+                const toast = document.getElementById(toastId);
+                if (toast) {
+                    toast.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+                    setTimeout(() => {
+                        toast.style.opacity = '1';
+                        toast.style.transform = 'translateX(0)';
+                    }, 50);
+                    
+                    setTimeout(() => {
+                        toast.style.opacity = '0';
+                        toast.style.transform = 'translateX(100px)';
+                        setTimeout(() => toast.remove(), 300);
+                    }, 3000);
+                }
+            }
+            
+            showToast('toast-success');
+        });
+    </script>
+}
+
+<style>
+    @@keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
+
+<div class="container" style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+    <div class="order-details-page">
+        <div style="margin-bottom: 2rem;">
+            <a asp-controller="Seller" asp-action="Atelier" style="color: #d4af37; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                &larr; Back to Atelier
+            </a>
+        </div>
+
+        <div class="confirmation-page">
+            <h1>Order Details</h1>
+            <p class="order-number">Order Number: @Model.OrderNumber</p>
+            <p class="message" style="margin-bottom: 2rem;">
+                Current Status: 
+                <span style="padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500; @(Model.Status == "Delivered" ? "background: #28a745; color: white;" : Model.Status == "Shipped" ? "background: #ffc107; color: #333;" : "background: #6c757d; color: white;")">
+                    @Model.Status
+                </span>
+            </p>
+
+            @if (!string.IsNullOrEmpty(Model.StreetAddress) || !string.IsNullOrEmpty(Model.City) || !string.IsNullOrEmpty(Model.StateProvince) || !string.IsNullOrEmpty(Model.ZipPostalCode) || !string.IsNullOrEmpty(Model.Country))
+            {
+                <div class="summary-card" style="background: white; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <h2 style="margin-top: 0; margin-bottom: 1rem;">Shipping Address</h2>
+                    <p style="padding: 0; margin: 0;">
+                        @(Model.User != null ? $"{Model.User.FirstName} {Model.User.LastName}" : "Customer")<br>
+                        @Model.StreetAddress<br>
+                        @Model.City, @Model.StateProvince @Model.ZipPostalCode<br>
+                        @Model.Country
+                    </p>
+                </div>
+            }
+
+            <div class="summary-card" style="background: white; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h2 style="margin-top: 0; margin-bottom: 1rem;">Update Order Status</h2>
+                <form asp-controller="Seller" asp-action="UpdateOrderStatus" method="post" style="display: flex; gap: 1rem; align-items: flex-end;">
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <div style="flex: 1;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">New Status</label>
+                        <select name="status" class="form-control" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                            <option value="Pending" selected="@(Model.Status == "Pending")">Pending</option>
+                            <option value="Processing" selected="@(Model.Status == "Processing")">Processing</option>
+                            <option value="Shipped" selected="@(Model.Status == "Shipped")">Shipped</option>
+                            <option value="Delivered" selected="@(Model.Status == "Delivered")">Delivered</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-gold" style="background: #d4af37; color: white; border: none; padding: 0.75rem 2rem; border-radius: 4px; font-weight: 600; cursor: pointer;">Update Status</button>
+                </form>
+            </div>
+            
+            <div class="summary-card" style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h2 style="margin-top: 0; margin-bottom: 1rem;">Items</h2>
+                @if (Model.OrderItems != null)
+                {
+                    @foreach (var item in Model.OrderItems)
+                    {
+                        <div class="cart-item" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; padding: 1rem; border-bottom: 1px solid #eee;">
+                            @if (item.Product != null)
+                            {
+                                <img src="@item.Product.ImageUrl" alt="@item.Product.Name" style="width: 80px; height: 80px; object-fit: cover; border-radius: 4px;" />
+                            }
+                            <div class="item-details" style="flex: 1;">
+                                <h3 style="margin: 0 0 0.5rem 0;">@(item.Product?.Name ?? "Product")</h3>
+                                <p style="margin: 0; color: #666;">Qty: @item.Quantity</p>
+                            </div>
+                            <div class="item-price" style="text-align: right;">
+                                <p style="margin: 0; font-weight: 600;">₱@(item.Price * item.Quantity)</p>
+                            </div>
+                        </div>
+                    }
+                }
+                
+                <h2 style="margin-top: 2rem; margin-bottom: 1rem;">Order Summary</h2>
+                <div class="summary-row" style="display: flex; justify-content: space-between; padding: 0.5rem 0;">
+                    <span>Subtotal</span>
+                    <span>₱@Model.Subtotal.ToString("N2")</span>
+                </div>
+                <div class="summary-row" style="display: flex; justify-content: space-between; padding: 0.5rem 0;">
+                    <span>Shipping</span>
+                    <span>@(Model.ShippingCost == 0 ? "Complimentary" : "₱" + Model.ShippingCost.ToString("N2"))</span>
+                </div>
+                <div class="summary-row total" style="display: flex; justify-content: space-between; padding: 1rem 0; border-top: 2px solid #eee; margin-top: 0.5rem; font-size: 1.25rem; font-weight: 700;">
+                    <span>Total</span>
+                    <span>₱@Model.Total.ToString("N2")</span>
+                </div>
+            </div>
+            
+            <div class="order-info" style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+                <p style="margin: 0.5rem 0;"><strong>Order Date:</strong> @Model.OrderDate.ToString("MMMM dd, yyyy HH:mm")</p>
+                @if (Model.DeliveredDate.HasValue)
+                {
+                    <p style="margin: 0.5rem 0;"><strong>Delivered Date:</strong> @Model.DeliveredDate.Value.ToString("MMMM dd, yyyy HH:mm")</p>
+                }
+                <p style="margin: 0.5rem 0;"><strong>Customer:</strong> @(Model.User != null ? $"{Model.User.FirstName} {Model.User.LastName}" : "Unknown")</p>
+                <p style="margin: 0.5rem 0;"><strong>Email:</strong> @(Model.User?.Email ?? "N/A")</p>
+            </div>
+        </div>
+    </div>
+</div>

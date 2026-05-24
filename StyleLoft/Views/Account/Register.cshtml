@@ -1,0 +1,398 @@
+@model StyleLoft.ViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Register - Style Loft";
+}
+
+<style>
+    .auth-page {
+        min-height: 100vh;
+        display: flex;
+        background: #0a0a0a;
+        filter: drop-shadow(0 0 1rem #0a0a0a);
+    }
+
+    .auth-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3rem 4rem;
+        background: #0a0a0a;
+    }
+
+    .auth-logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #c9a227;
+        z-index: 1;
+    }
+
+    .auth-right {
+        flex: 1;
+        background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .auth-right::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(201, 162, 39, 0.05) 0%, transparent 50%);
+        animation: rotate 30s linear infinite;
+    }
+
+    @@keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    .auth-image-container {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+
+    .auth-image-container img {
+        max-width: 90%;
+        max-height: 70vh;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    .auth-image-tagline {
+        position: absolute;
+        bottom: 2rem;
+        left: 2rem;
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        color: #fff;
+        text-align: left;
+    }
+
+    .auth-left h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        color: #fff;
+        margin-bottom: 0.5rem;
+    }
+
+    .auth-left p {
+        color: #888;
+        margin-bottom: 2rem;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        color: #aaa;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 0.8rem 0;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #333;
+        color: #fff;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+    }
+
+    .form-group input:focus {
+        outline: none;
+        border-bottom-color: #c9a227;
+    }
+
+    .form-group input::placeholder {
+        color: #555;
+    }
+
+    .address-section {
+        margin: 2rem 0;
+    }
+
+    .address-section h3 {
+        font-family: 'Playfair Display', serif;
+        color: #fff;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .terms {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 1.5rem 0;
+        color: #888;
+        font-size: 0.9rem;
+    }
+
+    .terms input {
+        width: auto;
+    }
+
+    .btn-gold {
+        width: 100%;
+        background: #c9a227;
+        color: #0a0a0a;
+        border: none;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .btn-gold:hover {
+        background: #b8921f;
+    }
+
+    .auth-footer {
+        margin-top: 1.5rem;
+        text-align: center;
+        color: #888;
+    }
+
+    .auth-footer a {
+        color: #c9a227;
+        text-decoration: none;
+        font-weight: 600;
+        border-bottom: 1px solid #c9a227;
+    }
+
+    .bottom-nav {
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto;
+        color: #666;
+        font-size: 0.85rem;
+    }
+
+    .bottom-nav a {
+        color: #666;
+        text-decoration: none;
+        margin-left: 1.5rem;
+    }
+
+    .bottom-nav a:hover {
+        color: #c9a227;
+    }
+
+    .text-danger {
+        color: #dc3545;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+</style>
+
+<div class="auth-page">
+    <div class="auth-left">
+        <h1>Create Account</h1>
+        <p>Join the elite circle of Style Loft and experience curated haute couture.</p>
+        
+        <form asp-action="Register" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label>Full Name</label>
+                <div class="form-row">
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <input asp-for="FirstName" type="text" placeholder="First Name" required />
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <input asp-for="LastName" type="text" placeholder="Last Name" required />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Email Address</label>
+                <input asp-for="Email" type="email" placeholder="studio@styleloft.com" required />
+            </div>
+            
+            <div class="form-group">
+                <div class="form-row">
+                    <div>
+                        <label>Password</label>
+                        <input asp-for="Password" type="password" placeholder="••••••••" required />
+                    </div>
+                    <div>
+                        <label>Confirm Password</label>
+                        <input asp-for="ConfirmPassword" type="password" placeholder="••••••••" required />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="address-section">
+                <h3>Address (Philippines)</h3>
+                <div class="form-row">
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label>Province</label>
+                        <input asp-for="StateProvince" type="text" placeholder="Select Province" />
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label>City / Municipality</label>
+                        <input asp-for="City" type="text" placeholder="Select City" />
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 1rem;">
+                    <label>Zip / Postal Code</label>
+                    <input asp-for="ZipPostalCode" type="text" placeholder="1200" />
+                </div>
+                <div class="form-group">
+                    <label>Street Address</label>
+                    <input asp-for="StreetAddress" type="text" placeholder="Street, Barangay" />
+                </div>
+            </div>
+                        
+            <button type="submit" class="btn-gold" style="margin-bottom: none;">Sign Up</button>
+        </form>
+        
+        <div class="auth-footer">
+            <p>Already have an account? <a asp-action="Login">Login</a></p>
+        </div>
+    </div>
+
+    <div class="auth-right">
+        <div class="auth-image-container">
+            <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=luxury%20fashion%20black%20suit%20with%20gold%20embroidery%20haute%20couture%20elegant%20dramatic%20lighting&image_size=portrait_4_3" alt="Luxury Fashion" />
+            <div class="auth-image-tagline">
+                <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #c9a227;">New Collection 2024</p>
+                Define Your Own<br />Narrative.
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        async function autocompleteAddress(input, cityInput, provinceInput, zipInput, countryInput) {
+            let timeoutId;
+            const wrapper = document.createElement('div');
+            wrapper.style.position = 'relative';
+            input.parentNode.insertBefore(wrapper, input.nextSibling);
+            wrapper.appendChild(input);
+            
+            let dropdown = document.createElement('div');
+            dropdown.style.position = 'absolute';
+            dropdown.style.top = '100%';
+            dropdown.style.left = '0';
+            dropdown.style.right = '0';
+            dropdown.style.background = '#fff';
+            dropdown.style.border = '1px solid #ddd';
+            dropdown.style.borderRadius = '4px';
+            dropdown.style.maxHeight = '200px';
+            dropdown.style.overflowY = 'auto';
+            dropdown.style.zIndex = '1000';
+            dropdown.style.display = 'none';
+            wrapper.appendChild(dropdown);
+
+            input.addEventListener('input', function() {
+                clearTimeout(timeoutId);
+                const query = this.value.trim();
+                if (query.length < 3) {
+                    dropdown.style.display = 'none';
+                    return;
+                }
+
+                timeoutId = setTimeout(async () => {
+                    try {
+                        const response = await fetch(
+                            `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query + ', Philippines')}&countrycodes=PH&limit=5`
+                        );
+                        const data = await response.json();
+                        
+                        dropdown.innerHTML = '';
+                        if (data.length === 0) {
+                            dropdown.style.display = 'none';
+                            return;
+                        }
+
+                        data.forEach(place => {
+                            const item = document.createElement('div');
+                            item.style.padding = '0.8rem';
+                            item.style.cursor = 'pointer';
+                            item.style.borderBottom = '1px solid #eee';
+                            item.style.color = '#0a0a0a';
+                            item.textContent = place.display_name;
+                            item.addEventListener('click', function() {
+                                input.value = place.display_name.split(', Philippines')[0];
+                                
+                                let city = '';
+                                let province = '';
+                                let zip = '';
+                                
+                                const parts = place.display_name.split(', ');
+                                for (let i = 0; i < parts.length; i++) {
+                                    if (parts[i].toLowerCase().includes('city')) {
+                                        city = parts[i];
+                                    }
+                                    if (parts[i].toLowerCase().includes('province') || parts[i].toLowerCase().includes('region')) {
+                                        province = parts[i];
+                                    }
+                                }
+                                
+                                cityInput.value = city;
+                                provinceInput.value = province;
+                                zipInput.value = place.address?.postcode || '';
+                                if (countryInput) {
+                                    countryInput.value = 'Philippines';
+                                }
+                                
+                                dropdown.style.display = 'none';
+                            });
+                            dropdown.appendChild(item);
+                        });
+
+                        dropdown.style.display = 'block';
+                    } catch (error) {
+                        console.error('Autocomplete error:', error);
+                    }
+                }, 300);
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!wrapper.contains(e.target)) {
+                    dropdown.style.display = 'none';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const streetInput = document.querySelector('input[name="StreetAddress"]');
+            const cityInput = document.querySelector('input[name="City"]');
+            const provinceInput = document.querySelector('input[name="StateProvince"]');
+            const zipInput = document.querySelector('input[name="ZipPostalCode"]');
+            const countryInput = document.querySelector('input[name="Country"]');
+            
+            if (streetInput) {
+                autocompleteAddress(streetInput, cityInput, provinceInput, zipInput, countryInput);
+            }
+        });
+    </script>
+}

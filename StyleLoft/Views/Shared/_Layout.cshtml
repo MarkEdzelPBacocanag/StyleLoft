@@ -1,0 +1,97 @@
+@using Microsoft.AspNetCore.Identity
+@using StyleLoft.Models
+@inject UserManager<ApplicationUser> UserManager
+@{
+    var currentUser = await UserManager.GetUserAsync(User);
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Style Loft</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <!-- Google Fonts for that Luxury Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <a asp-controller="Home" asp-action="Index" class="logo">Style Loft</a>
+            <div class="nav-links">
+                <a asp-controller="Products" asp-action="Index">Wardrobe</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    if (currentUser!.IsSeller)
+                    {
+                        <a asp-controller="Seller" asp-action="Atelier">Atelier</a>
+                    }
+                    <a asp-controller="Cart" asp-action="Index">Bag</a>
+                    
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            @if (currentUser != null && !string.IsNullOrEmpty(currentUser.ProfileImage))
+                            {
+                                <img src="@currentUser.ProfileImage" alt="Profile" class="profile-pic" />
+                            }
+                            else
+                            {
+                                <span class="profile-icon">👤</span>
+                            }
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="dropdown-user">@currentUser?.FirstName</div>
+                            <a asp-controller="Orders" asp-action="History">My Orders</a>
+                            <a asp-controller="Account" asp-action="EditProfile">Edit Profile</a>
+                            @if (currentUser != null && !currentUser.IsSeller)
+                            {
+                                <a asp-controller="Account" asp-action="BecomeAtelier">Become an Seller</a>
+                            }
+                            <form asp-controller="Account" asp-action="Logout" method="post">
+                                <button type="submit" class="dropdown-link">Log out</button>
+                            </form>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <a asp-controller="Account" asp-action="Login">Login</a>
+                    <a asp-controller="Account" asp-action="Register" class="btn-gold">Sign Up</a>
+                }
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        @RenderBody()
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">Style Loft</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+                <a href="#">Shipping</a>
+            </div>
+            <div class="footer-copy">© @DateTime.Now.Year Style Loft. All Rights Reserved.</div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.dropdown-btn').click(function() {
+                $(this).next('.dropdown-content').toggle();
+            });
+            
+            $(document).click(function(e) {
+                if (!$(e.target).closest('.dropdown').length) {
+                    $('.dropdown-content').hide();
+                }
+            });
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

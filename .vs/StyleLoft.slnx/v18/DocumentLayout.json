@@ -1,0 +1,453 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\views\\seller\\atelier.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\views\\seller\\atelier.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Migrations\\20260520143632_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StyleLoft\\Migrations\\20260520143632_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Migrations\\20260520142951_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:StyleLoft\\Migrations\\20260520142951_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\controllers\\sellercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\controllers\\sellercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\migrations\\20260520150951_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\migrations\\20260520150951_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\views\\orders\\confirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\views\\orders\\confirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|c:\\users\\jack the ripper\\source\\repos\\styleloft\\styleloft\\views\\orders\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E7D5DB23-00C5-3E1B-5626-B0640DA178BF}|StyleLoft\\StyleLoft.csproj|solutionrelative:styleloft\\views\\orders\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "StyleLoft\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "StyleLoft\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAM8BAAAAAAAAAAAcwN8BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-05-20T15:57:15.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "StyleLoft\\Views\\Products\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "StyleLoft\\Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T15:13:49.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "StyleLoft\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "StyleLoft\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T15:11:21.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SellerController.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Controllers\\SellerController.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Controllers\\SellerController.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Controllers\\SellerController.cs",
+              "RelativeToolTip": "StyleLoft\\Controllers\\SellerController.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAADwv2YAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:49:16.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Atelier.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\Seller\\Atelier.cshtml",
+              "RelativeDocumentMoniker": "StyleLoft\\Views\\Seller\\Atelier.cshtml",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\Seller\\Atelier.cshtml",
+              "RelativeToolTip": "StyleLoft\\Views\\Seller\\Atelier.cshtml",
+              "ViewState": "AgIAADQAAAAAAAAAAAAswEAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T14:09:30.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Models\\OrderItem.cs",
+              "RelativeToolTip": "StyleLoft\\Models\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:13:39.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "StyleLoft\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAuwGsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:49:51.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "StyleLoft\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "StyleLoft\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T16:01:46.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Models\\Order.cs",
+              "RelativeToolTip": "StyleLoft\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:13:39.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Controllers\\CartController.cs",
+              "RelativeToolTip": "StyleLoft\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAowGEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:50:03.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "StyleLoft\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "StyleLoft\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T15:11:18.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\appsettings.json",
+              "RelativeDocumentMoniker": "StyleLoft\\appsettings.json",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\appsettings.json",
+              "RelativeToolTip": "StyleLoft\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-20T15:49:54.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Models\\CartItem.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Models\\CartItem.cs",
+              "RelativeToolTip": "StyleLoft\\Models\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:17:46.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "StyleLoft\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAywDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:34:41.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Program.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Program.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Program.cs",
+              "RelativeToolTip": "StyleLoft\\Program.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAowDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:19:59.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "StyleLoft\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAowGIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:50:12.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "StyleLoft\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAowCsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:49:41.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "StyleLoft\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAowC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:23:05.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "StyleLoft\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "StyleLoft\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T14:09:15.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20260520150951_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Migrations\\20260520150951_InitialCreate.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Migrations\\20260520150951_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Migrations\\20260520150951_InitialCreate.cs",
+              "RelativeToolTip": "StyleLoft\\Migrations\\20260520150951_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T15:09:51.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Models\\Product.cs",
+              "RelativeToolTip": "StyleLoft\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:41:14.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20260520143632_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Migrations\\20260520143632_InitialCreate.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Migrations\\20260520143632_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Migrations\\20260520143632_InitialCreate.cs",
+              "RelativeToolTip": "StyleLoft\\Migrations\\20260520143632_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:36:32.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "StyleLoft\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:17:53.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "StyleLoft\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:13:59.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20260520142951_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Migrations\\20260520142951_InitialCreate.cs",
+              "RelativeDocumentMoniker": "StyleLoft\\Migrations\\20260520142951_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Migrations\\20260520142951_InitialCreate.cs",
+              "RelativeToolTip": "StyleLoft\\Migrations\\20260520142951_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T14:29:52.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Confirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\Orders\\Confirmation.cshtml",
+              "RelativeDocumentMoniker": "StyleLoft\\Views\\Orders\\Confirmation.cshtml",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\Orders\\Confirmation.cshtml",
+              "RelativeToolTip": "StyleLoft\\Views\\Orders\\Confirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T13:56:48.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "History.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\Orders\\History.cshtml",
+              "RelativeDocumentMoniker": "StyleLoft\\Views\\Orders\\History.cshtml",
+              "ToolTip": "C:\\Users\\Jack The Ripper\\source\\repos\\StyleLoft\\StyleLoft\\Views\\Orders\\History.cshtml",
+              "RelativeToolTip": "StyleLoft\\Views\\Orders\\History.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-20T14:10:50.374Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

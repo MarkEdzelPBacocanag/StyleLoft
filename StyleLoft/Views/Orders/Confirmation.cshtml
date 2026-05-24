@@ -1,0 +1,32 @@
+@model StyleLoft.Models.Order
+
+<div class="confirmation-page">
+    <div class="confirmation-icon">
+        <i class="icon-check"></i>
+    </div>
+    
+    <h1>Thank You For Your Order</h1>
+    <p class="order-number">Order Number: @Model.OrderNumber</p>
+    <p class="message">Your exquisite selections are being prepared for dispatch.</p>
+    
+    <div class="summary-card">
+        <h2>Order Summary</h2>
+        <div class="summary-row">
+            <span>Subtotal</span>
+            <span>₱@Model.Subtotal.ToString("N2")</span>
+        </div>
+        <div class="summary-row">
+            <span>Shipping</span>
+            <span>@(Model.ShippingCost == 0 ? "Complimentary" : "₱" + Model.ShippingCost.ToString("N2"))</span>
+        </div>
+        <div class="summary-row total">
+            <span>Total</span>
+            <span>₱@Model.Total.ToString("N2")</span>
+        </div>
+    </div>
+    
+    <div class="actions">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Continue Shopping</a>
+        <a asp-controller="Orders" asp-action="History" class="btn btn-outline">View Order History</a>
+    </div>
+</div>

@@ -1,0 +1,166 @@
+@model EditProfileViewModel
+@using Microsoft.AspNetCore.Identity
+@using StyleLoft.Models
+@inject UserManager<ApplicationUser> UserManager
+@{
+    ViewData["Title"] = "Edit Profile";
+    var currentUser = await UserManager.GetUserAsync(User);
+}
+
+@if (TempData["Success"] != null)
+{
+    <div id="toast-success" class="toast-notification" style="position: fixed; top: 20px; right: 20px; background: #28a745; color: white; padding: 1rem 1.5rem; border-radius: 8px; z-index: 1000; box-shadow: 0 4px 16px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 0.75rem; opacity: 0; transform: translateX(100px);">
+        <span style="font-size: 1.25rem;">✅</span>
+        <span>@TempData["Success"]</span>
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div id="toast-error" class="toast-notification" style="position: fixed; top: 20px; right: 20px; background: #dc3545; color: white; padding: 1rem 1.5rem; border-radius: 8px; z-index: 1000; box-shadow: 0 4px 16px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 0.75rem; opacity: 0; transform: translateX(100px);">
+        <span style="font-size: 1.25rem;">❌</span>
+        <span>@TempData["Error"]</span>
+    </div>
+}
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize toast notifications
+            function showToast(toastId) {
+                const toast = document.getElementById(toastId);
+                if (toast) {
+                    toast.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+                    setTimeout(() => {
+                        toast.style.opacity = '1';
+                        toast.style.transform = 'translateX(0)';
+                    }, 50);
+                    
+                    setTimeout(() => {
+                        toast.style.opacity = '0';
+                        toast.style.transform = 'translateX(100px)';
+                        setTimeout(() => toast.remove(), 300);
+                    }, 3000);
+                }
+            }
+            
+            showToast('toast-success');
+            showToast('toast-error');
+        });
+    </script>
+}
+
+<style>
+    @@keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="atelier-header">
+        <h1>Edit Profile</h1>
+        <p>Update your personal information.</p>
+        @if (currentUser != null && !string.IsNullOrEmpty(currentUser.ProfileImage))
+        {
+            <img src="@currentUser.ProfileImage" alt="Profile" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-top: 1rem; border: 3px solid #c9a227;" />
+        }
+    </div>
+    
+    <div class="create-listing" style="max-width: 600px; margin: 0 auto;">
+        <form asp-action="EditProfile" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Profile Picture</label>
+                <input type="file" name="ProfileImageFile" accept="image/*" class="file-input" />
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input name="FirstName" class="form-control" value="@Model.FirstName" />
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input name="LastName" class="form-control" value="@Model.LastName" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="Email" class="form-control" value="@Model.Email" />
+            </div>
+
+            <div class="form-group">
+                <label>Street Address</label>
+                <input type="text" name="StreetAddress" class="form-control" value="@Model.StreetAddress" placeholder="Enter street address..." />
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" name="City" class="form-control" value="@Model.City" />
+                </div>
+                <div class="form-group">
+                    <label>State/Province</label>
+                    <input type="text" name="StateProvince" class="form-control" value="@Model.StateProvince" />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>ZIP/Postal Code</label>
+                    <input type="text" name="ZipPostalCode" class="form-control" value="@Model.ZipPostalCode" />
+                </div>
+                <div class="form-group">
+                    <label>Country</label>
+                    <input type="text" name="Country" class="form-control" value="@Model.Country" />
+                </div>
+            </div>
+
+            <hr style="margin: 2rem 0; border-color: #f0f0f0;" />
+
+            <h4 style="margin-bottom: 1rem;">Change Password</h4>
+            
+            <div class="form-group">
+                <label>Current Password</label>
+                <input type="password" name="CurrentPassword" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>New Password</label>
+                <input type="password" name="NewPassword" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Confirm New Password</label>
+                <input type="password" name="ConfirmNewPassword" class="form-control" />
+            </div>
+
+            @if (Model.IsSeller)
+            {
+                <hr style="margin: 2rem 0; border-color: #f0f0f0;" />
+                
+                <div style="background: #fff3cd; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
+                    <h4 style="margin-top: 0; margin-bottom: 0.5rem; color: #856404;">⚠️ Seller Status</h4>
+                    <p style="margin: 0; color: #856404;">You are currently an Seller. Stopping will remove your access to the seller dashboard and your products will no longer be visible.</p>
+                </div>
+                
+                <form asp-action="StopBeingAtelier" method="post" style="margin-bottom: 1rem;">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="btn btn-danger" style="background: #dc3545; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; cursor: pointer;">Stop Being Atelier</button>
+                </form>
+            }
+
+            <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                <a asp-action="Index" asp-controller="Home" class="btn btn-outline">Cancel</a>
+                <button type="submit" class="btn-gold">Update Profile</button>
+            </div>
+        </form>
+    </div>
+</div>

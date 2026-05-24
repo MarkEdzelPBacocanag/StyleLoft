@@ -1,0 +1,126 @@
+@model CreateProductViewModel
+@{
+    ViewData["Title"] = "Edit Product";
+}
+
+@if (TempData["Success"] != null)
+{
+    <div id="toast-success" class="toast-notification" style="position: fixed; top: 20px; right: 20px; background: #28a745; color: white; padding: 1rem 1.5rem; border-radius: 8px; z-index: 1000; box-shadow: 0 4px 16px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 0.75rem; opacity: 0; transform: translateX(100px);">
+        <span style="font-size: 1.25rem;">✅</span>
+        <span>@TempData["Success"]</span>
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div id="toast-error" class="toast-notification" style="position: fixed; top: 20px; right: 20px; background: #dc3545; color: white; padding: 1rem 1.5rem; border-radius: 8px; z-index: 1000; box-shadow: 0 4px 16px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 0.75rem; opacity: 0; transform: translateX(100px);">
+        <span style="font-size: 1.25rem;">❌</span>
+        <span>@TempData["Error"]</span>
+    </div>
+}
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize toast notifications
+            function showToast(toastId) {
+                const toast = document.getElementById(toastId);
+                if (toast) {
+                    toast.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+                    setTimeout(() => {
+                        toast.style.opacity = '1';
+                        toast.style.transform = 'translateX(0)';
+                    }, 50);
+                    
+                    setTimeout(() => {
+                        toast.style.opacity = '0';
+                        toast.style.transform = 'translateX(100px)';
+                        setTimeout(() => toast.remove(), 300);
+                    }, 3000);
+                }
+            }
+            
+            showToast('toast-success');
+            showToast('toast-error');
+        });
+    </script>
+}
+
+<style>
+    @@keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="atelier-header">
+        <h1>Edit Product</h1>
+        <p>Update your product details.</p>
+    </div>
+    
+    <div class="create-listing" style="max-width: 600px; margin: 0 auto;">
+        <form asp-action="Edit" asp-route-id="@ViewBag.ProductId" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Product Image (Leave blank to keep current)</label>
+                <input type="file" name="ImageFile" accept="image/*" class="file-input" />
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Product Name</label>
+                    <input name="Name" class="form-control" value="@Model.Name" />
+                </div>
+                <div class="form-group">
+                    <label>Price (PHP)</label>
+                    <input name="Price" type="number" step="0.01" class="form-control" value="@Model.Price" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Material / Fabric</label>
+                <input name="Material" class="form-control" value="@Model.Material" />
+            </div>
+            <div class="form-group">
+                <label>Category</label>
+                <select name="Category" class="form-control" required>
+                    <option value="">Select a category</option>
+                    <option value="Evening Wear" selected="@(Model.Category == "Evening Wear")">Evening Wear</option>
+                    <option value="Outerwear" selected="@(Model.Category == "Outerwear")">Outerwear</option>
+                    <option value="Accessories" selected="@(Model.Category == "Accessories")">Accessories</option>
+                    <option value="Footwear" selected="@(Model.Category == "Footwear")">Footwear</option>
+                    <option value="Tops" selected="@(Model.Category == "Tops")">Tops</option>
+                    <option value="Bottoms" selected="@(Model.Category == "Bottoms")">Bottoms</option>
+                    <option value="Dresses" selected="@(Model.Category == "Dresses")">Dresses</option>
+                    <option value="Jewelry" selected="@(Model.Category == "Jewelry")">Jewelry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Collection</label>
+                <input name="Collection" class="form-control" value="@Model.Collection" />
+            </div>
+            
+            <div class="form-group">
+                <label>Stock Quantity</label>
+                <input name="StockQuantity" type="number" min="0" class="form-control" value="@Model.StockQuantity" />
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea name="Description" rows="4" class="form-control">@Model.Description</textarea>
+            </div>
+
+            <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                <a asp-action="Atelier" class="btn btn-outline">Cancel</a>
+                <button type="submit" class="btn-gold">Update Product</button>
+            </div>
+        </form>
+    </div>
+</div>

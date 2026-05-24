@@ -1,0 +1,39 @@
+@model List<StyleLoft.Models.Product>
+
+<div class="products-index">
+    <div class="filters-bar">
+        <h1>Wardrobe</h1>
+        <div class="filters">
+            <select class="filter-select">
+                <option>All Categories</option>
+                <option>Evening Wear</option>
+                <option>Outerwear</option>
+                <option>Accessories</option>
+            </select>
+            <select class="filter-select">
+                <option>Sort By: Featured</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="product-grid">
+        @foreach (var product in Model)
+        {
+            <div class="product-card">
+                <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id">
+                    <div class="product-image">
+                        <img src="@product.ImageUrl" alt="@product.Name" />
+                        <span class="overlay">View Details</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>@product.Name</h3>
+                        <p class="category">@product.Collection</p>
+                        <p class="price">₱@product.Price.ToString("N2")</p>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>

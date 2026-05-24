@@ -1,0 +1,155 @@
+@model SellerController.SellerAtelierViewModel
+@{
+    ViewData["Title"] = "Seller Atelier";
+}
+
+@if (TempData["Success"] != null)
+{
+    <div id="toast-success" class="toast-notification" style="position: fixed; top: 20px; right: 20px; background: #28a745; color: white; padding: 1rem 1.5rem; border-radius: 8px; z-index: 1000; box-shadow: 0 4px 16px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 0.75rem; opacity: 0; transform: translateX(100px);">
+        <span style="font-size: 1.25rem;">✅</span>
+        <span>@TempData["Success"]</span>
+    </div>
+}
+
+@if (TempData["Error"] != null)
+{
+    <div id="toast-error" class="toast-notification" style="position: fixed; top: 20px; right: 20px; background: #dc3545; color: white; padding: 1rem 1.5rem; border-radius: 8px; z-index: 1000; box-shadow: 0 4px 16px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 0.75rem; opacity: 0; transform: translateX(100px);">
+        <span style="font-size: 1.25rem;">❌</span>
+        <span>@TempData["Error"]</span>
+    </div>
+}
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize toast notifications
+            function showToast(toastId) {
+                const toast = document.getElementById(toastId);
+                if (toast) {
+                    toast.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+                    setTimeout(() => {
+                        toast.style.opacity = '1';
+                        toast.style.transform = 'translateX(0)';
+                    }, 50);
+                    
+                    setTimeout(() => {
+                        toast.style.opacity = '0';
+                        toast.style.transform = 'translateX(100px)';
+                        setTimeout(() => toast.remove(), 300);
+                    }, 3000);
+                }
+            }
+            
+            showToast('toast-success');
+            showToast('toast-error');
+        });
+    </script>
+}
+
+<style>
+    @@keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
+
+<!-- Rest of your existing Atelier view code -->
+
+<div class="atelier-header">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <div>
+            <h1>Seller Atelier</h1>
+            <p>Curate your collection with editorial precision.</p>
+        </div>
+        <a asp-controller="Seller" asp-action="Orders" class="btn btn-outline" style="padding: 0.75rem 1.5rem; border: 1px solid #d4af37; color: #d4af37; text-decoration: none; border-radius: 4px; display: inline-flex; align-items: center; gap: 0.5rem;">
+            📦 View Orders
+        </a>
+    </div>
+</div>
+
+<div class="atelier-grid">
+    <!-- Create New Listing Form -->
+    <div class="create-listing">
+        <h2>Create New Listing</h2>
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Product Image</label>
+                <input type="file" name="ImageFile" accept="image/*" class="file-input" />
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Product Name</label>
+                    <input name="Name" class="form-control" placeholder="e.g. Silk Evening Gown" />
+                </div>
+                <div class="form-group">
+                    <label>Price (PHP)</label>
+                    <input name="Price" type="number" step="0.01" class="form-control" placeholder="0.00" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Material / Fabric</label>
+                <input name="Material" class="form-control" placeholder="e.g. 100% Raw Silk" />
+            </div>
+            <div class="form-group">
+                <label>Category</label>
+                <select name="Category" class="form-control" required>
+                    <option value="">Select a category</option>
+                    <option value="Evening Wear">Evening Wear</option>
+                    <option value="Outerwear">Outerwear</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Footwear">Footwear</option>
+                    <option value="Tops">Tops</option>
+                    <option value="Bottoms">Bottoms</option>
+                    <option value="Dresses">Dresses</option>
+                    <option value="Jewelry">Jewelry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Collection</label>
+                <input name="Collection" class="form-control" placeholder="e.g. Spring Summer 2025" />
+            </div>
+            
+            <div class="form-group">
+                <label>Stock Quantity</label>
+                <input name="StockQuantity" type="number" min="0" class="form-control" placeholder="0" />
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea name="Description" rows="4" class="form-control"></textarea>
+            </div>
+
+            <button type="submit" class="btn-gold">Publish Item</button>
+        </form>
+    </div>
+
+    <!-- Published Items List -->
+    <div class="published-items">
+        <h2>Published (@Model.PublishedProducts.Count)</h2>
+        <div class="item-grid">
+            @foreach (var product in Model.PublishedProducts)
+            {
+                <div class="item-card">
+                    <div class="item-image-wrapper">
+                        <img src="@product.ImageUrl" alt="@product.Name" />
+                        <div class="item-overlay">
+                            <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id" class="overlay-btn">View</a>
+                            <a asp-controller="Seller" asp-action="Edit" asp-route-id="@product.Id" class="overlay-btn">Edit</a>
+                        </div>
+                    </div>
+                    <h4>@product.Name</h4>
+                    <p>₱@product.Price.ToString("N2")</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>

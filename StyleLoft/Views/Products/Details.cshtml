@@ -1,0 +1,45 @@
+@model StyleLoft.Models.Product
+@{
+    ViewData["Title"] = Model.Name!;
+    var isSeller = ViewBag.IsProductSeller ?? false;
+}
+
+<div class="container">
+    <div class="product-details">
+        <img src="@Model.ImageUrl" alt="@Model.Name" />
+        <div class="product-info">
+            <h1>@Model.Name</h1>
+            <p class="price">₱@Model.Price.ToString("N2")</p>
+            <p class="description">@Model.Description</p>
+            
+            <div class="meta">
+                <div><strong>Material:</strong> @Model.Material</div>
+                <div><strong>Category:</strong> @Model.Category</div>
+                <div><strong>Collection:</strong> @Model.Collection</div>
+                <div><strong>InStock:</strong> @Model.StockQuantity</div>
+            </div>
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                if (!isSeller)
+                {
+                    <form asp-controller="Cart" asp-action="AddToCart" method="post" class="add-to-cart-form">
+                        <input type="hidden" name="productId" value="@Model.Id" />
+                        <input type="number" name="quantity" value="1" min="1" max="@Model.StockQuantity" />
+                        <button type="submit" class="btn-gold">Add to Bag</button>
+                    </form>
+                }
+                else
+                {
+                    <p style="margin-top: 1.5rem; padding: 1rem; background: #f8f6f3; border-radius: 4px; color: #555;">
+                        This is your product. You cannot add it to your own bag.
+                    </p>
+                }
+            }
+            else
+            {
+                <p><a asp-controller="Account" asp-action="Login">Login</a> to add to bag</p>
+            }
+        </div>
+    </div>
+</div>

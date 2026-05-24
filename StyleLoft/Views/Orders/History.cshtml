@@ -1,0 +1,58 @@
+@model List<StyleLoft.ViewModels.OrderViewModel>
+
+<div class="order-history-page">
+    <div class="page-header">
+        <h1>Order History</h1>
+        <p>Track your recent purchases and manage your wardrobe investments.</p>
+    </div>
+
+    @if (Model.Any())
+    {
+        <div class="orders-list">
+            @foreach (var order in Model)
+            {
+                <div class="order-card">
+                    <div class="order-header">
+                        <div class="order-id">
+                            <span class="label">Order Number</span>
+                            <span class="value">@order.OrderNumber</span>
+                        </div>
+                        <div class="order-status">
+                            <span class="status-badge @(order.Status == "Delivered" ? "delivered" : "pending")">
+                                @order.Status
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="order-body">
+                        <div class="order-details">
+                            <p><strong>Date:</strong> @order.OrderDate.ToString("MMM dd, yyyy")</p>
+                            <p><strong>Items:</strong> @order.ItemCount</p>
+                        </div>
+                        <div class="order-total">
+                            <span>Total</span>
+                            <h3>₱@order.Total.ToString("N2")</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="order-footer">
+                        <a asp-controller="Orders" asp-action="Details" asp-route-id="@order.Id" class="btn btn-outline btn-sm">View Details</a>
+                        @if (order.Status == "Delivered")
+                        {
+                            <button class="btn btn-link btn-sm">Reorder</button>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="empty-state">
+            <i class="icon-bag-empty"></i>
+            <h2>No orders yet</h2>
+            <p>Start exploring our collections to build your wardrobe.</p>
+            <a asp-controller="Products" asp-action="Index" class="btn btn-gold">Shop Now</a>
+        </div>
+    }
+</div>
