@@ -21,7 +21,7 @@
         </div>
         <div class="summary-row total">
             <span>Total</span>
-            <span>₱@Model.Total.ToString("N2")</span>
+            <span>₱@(Model.Subtotal + Model.ShippingCost).ToString("N2")</span>
         </div>
     </div>
     

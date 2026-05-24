@@ -35,7 +35,7 @@ namespace StyleLoft.Controllers
                 Id = o.Id,
                 OrderNumber = o.OrderNumber,
                 OrderDate = o.OrderDate,
-                Total = o.Total,
+                Total = o.Subtotal + o.ShippingCost,
                 Status = o.Status,
                 ItemCount = o.OrderItems!.Count
             }).ToList();

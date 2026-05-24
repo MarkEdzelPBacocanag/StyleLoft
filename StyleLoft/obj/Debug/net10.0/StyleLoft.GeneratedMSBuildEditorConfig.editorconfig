@@ -19,93 +19,93 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
 build_property.RootNamespace = StyleLoft
 build_property.RootNamespace = StyleLoft
-build_property.ProjectDir = C:\Users\Jack The Ripper\source\repos\StyleLoft\StyleLoft\
+build_property.ProjectDir = c:\Users\Jack The Ripper\source\repos\StyleLoft\StyleLoft\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Jack The Ripper\source\repos\StyleLoft\StyleLoft
+build_property.MSBuildProjectDirectory = c:\Users\Jack The Ripper\source\repos\StyleLoft\StyleLoft
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Account/EditProfile.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Account/EditProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0UHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Account/Login.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Account/Register.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Cart/Index.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Home/Index.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Home/Privacy.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Orders/Confirmation.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Orders/Confirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Orders/Details.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Orders/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Orders/History.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Orders/History.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEhpc3RvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Products/Details.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Products/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Products/Index.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Seller/Atelier.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Seller/Atelier.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyXEF0ZWxpZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Seller/Edit.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Seller/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Seller/OrderDetails.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Seller/OrderDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyXE9yZGVyRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Seller/Orders.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Seller/Orders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyXE9yZGVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Shared/Error.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/_ViewImports.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/_ViewStart.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Shared/_Layout.cshtml]
+[c:/Users/Jack The Ripper/source/repos/StyleLoft/StyleLoft/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-zc4evg9be5
