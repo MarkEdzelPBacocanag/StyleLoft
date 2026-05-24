@@ -45,7 +45,7 @@
                             <a asp-controller="Account" asp-action="EditProfile">Edit Profile</a>
                             @if (currentUser != null && !currentUser.IsSeller)
                             {
-                                <a asp-controller="Account" asp-action="BecomeAtelier">Become an Seller</a>
+                                <a asp-controller="Account" asp-action="BecomeAtelier">Become a Seller</a>
                             }
                             <form asp-controller="Account" asp-action="Logout" method="post">
                                 <button type="submit" class="dropdown-link">Log out</button>
