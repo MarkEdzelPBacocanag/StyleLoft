@@ -1,6 +1,6 @@
 # StyleLoft - Fashion Marketplace Platform
-# Members
 
+## Members
 -FEVE LANCE BACLAYONFEVE LANCE BACLAYON
 -MARK EDZEL BACOCANAGMARK EDZEL BACOCANAG  =====group leader=====
 -JOREN JAY BULAHANJOREN JAY BULAHAN
